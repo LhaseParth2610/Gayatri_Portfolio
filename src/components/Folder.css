@@ -1,0 +1,90 @@
+.folder {
+  position: relative;
+  width: 280px;
+  height: 200px;
+  perspective: 1200px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.folder__back {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--folder-back-color);
+  border-radius: 8px 12px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.folder__back::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 35%;
+  height: 16px;
+  background: var(--folder-back-color);
+  border-radius: 8px 8px 0 0;
+}
+
+.paper {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 86%;
+  height: 155px;
+  margin-left: -43%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+  overflow: hidden;
+  border: 4px solid #fff; /* to frame the images like polaroids */
+}
+
+.paper-1 { background: var(--paper-1); bottom: 12px; }
+.paper-2 { background: var(--paper-2); bottom: 16px; }
+.paper-3 { background: var(--paper-3); bottom: 20px; }
+
+.folder.open .paper {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.1s linear; /* Fast response to mouse move */
+}
+
+.folder.open .paper-1 {
+  transform: translate(calc(-40px + var(--magnet-x, 0)), calc(-130px + var(--magnet-y, 0))) rotate(-14deg);
+  z-index: 4;
+}
+
+.folder.open .paper-2 {
+  transform: translate(calc(var(--magnet-x, 0)), calc(-160px + var(--magnet-y, 0))) rotate(0deg);
+  z-index: 5;
+}
+
+.folder.open .paper-3 {
+  transform: translate(calc(40px + var(--magnet-x, 0)), calc(-130px + var(--magnet-y, 0))) rotate(14deg);
+  z-index: 6;
+}
+
+.folder__front {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 95%; 
+  background: var(--folder-color);
+  border-radius: 8px 8px 0 0;
+  transform-origin: bottom center;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+}
+
+.folder.open .folder__front {
+  transform: rotateX(40deg);
+}
