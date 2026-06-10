@@ -426,7 +426,7 @@ export default function App() {
 
               {/* Right Column: Paragraph Bio */}
               <div className="md:col-span-7 pt-[8vw] md:pt-[10vw] flex flex-col justify-between h-full">
-                <div className="space-y-6 text-[#d5d5d5] font-editorial text-xl md:text-2xl leading-relaxed">
+                <div className="space-y-6 text-[#d5d5d5] font-editorial text-[22px] md:text-[28px] leading-relaxed">
                   <p>
                     Hi! I'm Gayatri Pise, a contemporary fashion designer, patternmaker, and visual storyteller holding a Bachelor of Design (B.Des) from the School of Fashion Technology (SOFT, 2026) and a Pearson BTEC Global qualification (2024). I explore the balance between deconstruction, modern structures, and raw human emotion within wearable art.
                   </p>
