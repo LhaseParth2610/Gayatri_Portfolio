@@ -405,12 +405,6 @@ export default function App() {
         {/* About Me Section */}
         <section id="about" className="py-24 bg-[#0a0a0a] border-t border-[#222] relative overflow-hidden">
           <div className="max-w-[1600px] mx-auto px-6 md:px-12 xl:px-24">
-            {/* Top Subtitle */}
-            <div className="text-center mb-8">
-              <span className="text-xs uppercase tracking-[0.25em] text-gray-500 font-mono">
-                I WILL BE ON VOGUE
-              </span>
-            </div>
 
             {/* Massive Overlapping Heading */}
             <h2 className="font-condensed text-[13vw] md:text-[16vw] leading-[0.75] tracking-tight uppercase text-[#b30000] font-black text-center select-none relative z-10 mb-[-5vw] md:mb-[-6vw] pointer-events-none">
